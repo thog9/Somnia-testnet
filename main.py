@@ -80,6 +80,10 @@ async def run_swapping(language: str):
     from scripts.swapping import run_swapping as swapping_run
     await swapping_run(language)
 
+async def run_conftnft(language: str):
+    from scripts.conftnft import run_conftnft as conftnft_run
+    await conftnft_run(language)
+
 async def cmd_exit(language: str):
     print_border(f"Exiting...", Fore.GREEN)
     sys.exit(0)
@@ -94,6 +98,7 @@ SCRIPT_MAP = {
     "mintping": run_mintping,
     "swappong": run_swappong,
     "swapping": run_swapping,
+    "conftnft": run_conftnft,
     "exit": cmd_exit
 }
 
@@ -108,7 +113,8 @@ def get_available_scripts(language):
             {"name": "6. Deploy NFT smart-contract | Somnia Testnet", "value": "deploynft", "separator": True},
             {"name": "7. Swap $PONG -> $PING | Somnia Testnet", "value": "swappong"},
             {"name": "8. Swap $PING -> $PONG | Somnia Testnet", "value": "swapping", "separator": True},
-            {"name": "9. Thoát", "value": "exit"},
+            {"name": "9. Mint NFT CoNFT", "value": "conftnft"},
+            {"name": "10. Thoát", "value": "exit"},
         ],
         'en': [
             {"name": "1. Faucet token $STT", "value": "faucetstt"},
@@ -119,7 +125,8 @@ def get_available_scripts(language):
             {"name": "6. Deploy NFT smart-contract", "value": "deploy_erc721", "separator": True},
             {"name": "7. Swap $PONG -> $PING | Somnia Testnet", "value": "swappong"},
             {"name": "8. Swap $PING -> $PONG | Somnia Testnet", "value": "swapping", "separator": True},
-            {"name": "9. Exit", "value": "exit"},
+            {"name": "9. Mint NFT CoNFT", "value": "conftnft"},
+            {"name": "10. Exit", "value": "exit"},
         ]
     }
     return scripts[language]
