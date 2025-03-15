@@ -60,6 +60,10 @@ async def run_deploytoken(language: str):
     from scripts.deploytoken import run_deploytoken as deploytoken_run
     await deploytoken_run(language)
 
+async def run_sendtoken(language: str):
+    from scripts.sendtoken import run_sendtoken as sendtoken_run
+    await sendtoken_run(language)
+
 async def run_deploynft(language: str):
     from scripts.deploynft import run_deploynft as deploynft_run
     await deploynft_run(language)
@@ -84,6 +88,18 @@ async def run_conftnft(language: str):
     from scripts.conftnft import run_conftnft as conftnft_run
     await conftnft_run(language)
 
+async def run_mintsusdt(language: str):
+    from scripts.mintsusdt import run_mintsusdt as mintsusdt_run
+    await mintsusdt_run(language)
+
+async def run_buymeme(language: str):
+    from scripts.buymeme import run_buymeme as buymeme_run
+    await buymeme_run(language)
+
+async def run_sellmeme(language: str):
+    from scripts.sellmeme import run_sellmeme as sellmeme_run
+    await sellmeme_run(language)
+
 async def cmd_exit(language: str):
     print_border(f"Exiting...", Fore.GREEN)
     sys.exit(0)
@@ -93,12 +109,16 @@ SCRIPT_MAP = {
     "faucetstt": run_faucetstt,
     "sendtx": run_sendtx,
     "deploytoken": run_deploytoken,
+    "sendtoken": run_sendtoken,
     "deploynft": run_deploynft,
     "mintpong": run_mintpong,
     "mintping": run_mintping,
     "swappong": run_swappong,
     "swapping": run_swapping,
     "conftnft": run_conftnft,
+    "mintsusdt": run_mintsusdt,
+    "buymeme": run_buymeme,
+    "sellmeme": run_sellmeme,
     "exit": cmd_exit
 }
 
@@ -110,11 +130,15 @@ def get_available_scripts(language):
             {"name": "3. Mint $PING | Somnia Testnet", "value": "mintping"},
             {"name": "4. Send TX ngẫu nhiên hoặc File (address.txt) | Somnia Testnet", "value": "sendtx"},
             {"name": "5. Deploy Token smart-contract | Somnia Testnet", "value": "deploytoken"},
-            {"name": "6. Deploy NFT smart-contract | Somnia Testnet", "value": "deploynft", "separator": True},
+            {"name": "6. Send Token ERC20 ngẫu nhiên hoặc File (addressERC20.txt) | Somnia Testnet", "value": "sendtoken"},
+            # {"name": "7. Deploy NFT smart-contract | Somnia Testnet", "value": "deploynft", "separator": True},
             {"name": "7. Swap $PONG -> $PING | Somnia Testnet", "value": "swappong"},
             {"name": "8. Swap $PING -> $PONG | Somnia Testnet", "value": "swapping", "separator": True},
-            {"name": "9. Mint NFT CoNFT", "value": "conftnft"},
-            {"name": "10. Thoát", "value": "exit"},
+            {"name": "9. Mint NFT Community Member of Somnia (CMS - CoNFT) | Somnia Testnet", "value": "conftnft"},
+            {"name": "10. Mint 1000 sUSDT | Somnia Testnet", "value": "mintsusdt"},
+            {"name": "11. Memecoin Trading - Mua Memecoin ( SOMI / SMSM / SMI ) | Somnia Testnet", "value": "buymeme"},
+            {"name": "12. Memecoin Trading - Bán Memecoin ( SOMI / SMSM / SMI ) | Somnia Testnet", "value": "sellmeme"},
+            {"name": "13. Exit", "value": "exit"},
         ],
         'en': [
             {"name": "1. Faucet token $STT", "value": "faucetstt"},
@@ -122,11 +146,14 @@ def get_available_scripts(language):
             {"name": "3. Mint $PING | Somnia Testnet", "value": "mintping"},
             {"name": "4. Send Random TX or File (address.txt) | Somnia Testnet", "value": "sendtx"},
             {"name": "5. Deploy Token smart-contract", "value": "deploy_erc20"},
-            {"name": "6. Deploy NFT smart-contract", "value": "deploy_erc721", "separator": True},
+            {"name": "6. Send Token ERC20 Random or File (addressERC20.txt) | Somnia Testnet", "value": "sendtoken"},
             {"name": "7. Swap $PONG -> $PING | Somnia Testnet", "value": "swappong"},
             {"name": "8. Swap $PING -> $PONG | Somnia Testnet", "value": "swapping", "separator": True},
-            {"name": "9. Mint NFT CoNFT", "value": "conftnft"},
-            {"name": "10. Exit", "value": "exit"},
+            {"name": "9. Mint NFT Community Member of Somnia (CMS - CoNFT) | Somnia Testnet", "value": "conftnft"},
+            {"name": "10. Mint 1000 sUSDT | Somnia Testnet", "value": "mintsusdt"},
+            {"name": "11. Memecoin Trading - Buy Memecoin ( SOMI / SMSM / SMI ) | Somnia Testnet", "value": "buymeme"},
+            {"name": "12. Memecoin Trading - Sell Memecoin ( SOMI / SMSM / SMI ) | Somnia Testnet", "value": "sellmeme"},
+            {"name": "13. Exit", "value": "exit"},
         ]
     }
     return scripts[language]
