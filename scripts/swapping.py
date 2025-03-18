@@ -170,7 +170,7 @@ async def swap_token(web3: Web3, private_key: str, token_in: str, token_out: str
         account = web3.eth.account.from_key(private_key)
         swap_router_address = "0x6aac14f090a35eea150705f72d90e4cdc4a49b2c"
         fee = 500
-        amount_out_minimum = int(amount_in * 0.999 * (10 ** 18))
+        amount_out_minimum = int(amount_in * 0.97 * (10 ** 18))
         amount_in_wei = int(amount_in * (10 ** 18))
 
         SWAP_ROUTER_ABI = [
