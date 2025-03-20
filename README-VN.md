@@ -5,6 +5,7 @@ Kho lưu trữ này chứa một bộ sưu tập các script Python được thi
 ## Tính Năng Tổng Quan
 
 ### Tính Năng Chung
+
 - **Hỗ Trợ Nhiều Tài Khoản**: Đọc khóa riêng tư từ `pvkey.txt` để thực hiện hành động trên nhiều tài khoản.
 - **CLI Màu Sắc**: Sử dụng `colorama` để hiển thị đầu ra hấp dẫn với văn bản và viền màu.
 - **Thực Thi Bất Đồng Bộ**: Được xây dựng với `asyncio` để tương tác blockchain hiệu quả.
@@ -124,7 +125,8 @@ Kho lưu trữ này chứa một bộ sưu tập các script Python được thi
 - **pvkey.txt**: Thêm khóa riêng tư (mỗi khóa một dòng) để tự động hóa ví.
 - **address.txt** / **addressERC20.txt** / **addressFaucet.txt** / **proxies.txt**: File tùy chọn để chỉ định địa chỉ hoặc proxy.
 
-## Installation
+## Cài Đặt
+
 1. **Clone this repository:**
 - Open cmd or Shell, then run the command:
 ```sh
@@ -167,6 +169,7 @@ python main.py
 - Chọn ngôn ngữ (Tiếng Việt/Tiếng Anh) và chọn script từ menu.
 
 ## Liên Hệ
+
 - **Telegram**: [thog099](https://t.me/thog099)
 - **Kênh Telegram**: [thogairdrops](https://t.me/thogairdrops)
 - **Replit**: Thog
