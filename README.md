@@ -5,6 +5,7 @@ This repository contains a collection of Python scripts designed to automate var
 ## Features Overview
 
 ### General Features
+
 - **Multi-Account Support**: Reads private keys from `pvkey.txt` to perform actions across multiple accounts.
 - **Colorful CLI**: Uses `colorama` for visually appealing output with colored text and borders.
 - **Asynchronous Execution**: Built with `asyncio` for efficient blockchain interactions.
@@ -125,6 +126,7 @@ This repository contains a collection of Python scripts designed to automate var
 - **address.txt** / **addressERC20.txt** / **addressFaucet.txt** / **proxies.txt**: Optional files for specifying addresses or proxies.
 
 ## Installation
+
 1. **Clone this repository:**
 - Open cmd or Shell, then run the command:
 ```sh
@@ -167,6 +169,7 @@ python main.py
 - Choose a language (Vietnamese/English).
 
 ## Contact
+
 - **Telegram**: [thog099](https://t.me/thog099)
 - **Channel**: [thogairdrops](https://t.me/thogairdrops)
 - **Replit**: Thog
