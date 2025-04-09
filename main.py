@@ -100,6 +100,30 @@ async def run_sellmeme(language: str):
     from scripts.sellmeme import run_sellmeme as sellmeme_run
     await sellmeme_run(language)
 
+async def run_fun(language: str):
+    from scripts.fun import run_fun as fun_run
+    await fun_run(language)
+
+async def run_lovesomini(language: str):
+    from scripts.lovesomini import run_lovesomini as lovesomini_run
+    await lovesomini_run(language)
+
+async def run_mintnerzo(language: str):
+    from scripts.mintnerzo import run_mintnerzo as mintnerzo_run
+    await mintnerzo_run(language)
+
+async def run_mintaura(language: str):
+    from scripts.mintaura import run_mintaura as mintaura_run
+    await mintaura_run(language)
+
+async def run_nftcollection(language: str):
+    from scripts.nftcollection import run_nftcollection as nftcollection_run
+    await nftcollection_run(language)
+
+async def run_mintair(language: str):
+    from scripts.mintair import run_mintair as mintair_run
+    await mintair_run(language)
+
 async def cmd_exit(language: str):
     print_border(f"Exiting...", Fore.GREEN)
     sys.exit(0)
@@ -119,6 +143,12 @@ SCRIPT_MAP = {
     "mintsusdt": run_mintsusdt,
     "buymeme": run_buymeme,
     "sellmeme": run_sellmeme,
+    "fun": run_fun,
+    "lovesomini": run_lovesomini,
+    "mintnerzo": run_mintnerzo,
+    "mintaura": run_mintaura,
+    "nftcollection": run_nftcollection,
+    "mintair": run_mintair,
     "exit": cmd_exit
 }
 
@@ -131,14 +161,20 @@ def get_available_scripts(language):
             {"name": "4. Send TX ngẫu nhiên hoặc File (address.txt) | Somnia Testnet", "value": "sendtx"},
             {"name": "5. Deploy Token smart-contract | Somnia Testnet", "value": "deploytoken"},
             {"name": "6. Send Token ERC20 ngẫu nhiên hoặc File (addressERC20.txt) | Somnia Testnet", "value": "sendtoken"},
-            # {"name": "7. Deploy NFT smart-contract | Somnia Testnet", "value": "deploynft", "separator": True},
             {"name": "7. Swap $PONG -> $PING | Somnia Testnet", "value": "swappong"},
             {"name": "8. Swap $PING -> $PONG | Somnia Testnet", "value": "swapping", "separator": True},
             {"name": "9. Mint NFT Community Member of Somnia (CMS - CoNFT) | Somnia Testnet", "value": "conftnft"},
             {"name": "10. Mint 1000 sUSDT | Somnia Testnet", "value": "mintsusdt"},
             {"name": "11. Memecoin Trading - Mua Memecoin ( SOMI / SMSM / SMI ) | Somnia Testnet", "value": "buymeme"},
             {"name": "12. Memecoin Trading - Bán Memecoin ( SOMI / SMSM / SMI ) | Somnia Testnet", "value": "sellmeme"},
-            {"name": "13. Exit", "value": "exit"},
+            {"name": "13. Quills Fun - Mint Tin Nhắn NFT | Somnia Testnet", "value": "fun"},
+            {"name": "14. Love Somini | Somnia Testnet", "value": "lovesomini"},
+            {"name": "15. Mint Shannon (NERZO-SH) | Somnia Testnet", "value": "mintnerzo"},
+            {"name": "16. Mint Somni ✨ - Somnia Testnet", "value": "mintaura"},
+            {"name": "17. Deploy NFT - Quản lý bộ sưu tập NFT [ Tạo | Mint | Đốt ] | Somnia Testnet", "value": "nftcollection"},
+            {"name": "18. Deploy Smart Contract Mintair | Somnia Testnet", "value": "mintair"},
+            {"name": "19. Exit", "value": "exit"},
+            
         ],
         'en': [
             {"name": "1. Faucet token $STT", "value": "faucetstt"},
@@ -153,7 +189,13 @@ def get_available_scripts(language):
             {"name": "10. Mint 1000 sUSDT | Somnia Testnet", "value": "mintsusdt"},
             {"name": "11. Memecoin Trading - Buy Memecoin ( SOMI / SMSM / SMI ) | Somnia Testnet", "value": "buymeme"},
             {"name": "12. Memecoin Trading - Sell Memecoin ( SOMI / SMSM / SMI ) | Somnia Testnet", "value": "sellmeme"},
-            {"name": "13. Exit", "value": "exit"},
+            {"name": "13. Quills Fun - Mint Message NFT | Somnia Testnet", "value": "fun"},
+            {"name": "14. Love Somini | Somnia Testnet", "value": "lovesomini"},
+            {"name": "15. Mint Shannon (NERZO-SH) | Somnia Testnet", "value": "mintnerzo"},
+            {"name": "16. Mint Somni ✨ - Somnia Testnet", "value": "mintaura"},
+            {"name": "17. Deploy NFT - Manage NFT Collection [ Create | Mint | Burn ] | Somnia Testnet", "value": "nftcollection"},
+            {"name": "18. Deploy Smart Contract Mintair | Somnia Testnet", "value": "mintair"},
+            {"name": "19. Exit", "value": "exit"},
         ]
     }
     return scripts[language]
