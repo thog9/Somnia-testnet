@@ -1,4 +1,4 @@
-PROXY 1
-PROXY 2
-PROXY 3
+PROXY 1 [socks5://user:pass@host:port ,...]
+PROXY 2 [socks5://user:pass@host:port ,...]
+PROXY 3 [socks5://user:pass@host:port ,...]
 ...
