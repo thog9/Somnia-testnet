@@ -230,7 +230,7 @@ def get_available_scripts(language):
             {"name": "16. Deploy Smart Contract Mintair | Somnia Testnet", "value": "mintair"},
             {"name": "17. Deploy NFT - Manage NFT Collection [ Create | Mint | Burn ] | Somnia Testnet", "value": "nftcollection"},
             {"name": "18. Send Random TX or File (address.txt) | Somnia Testnet", "value": "sendtx"},
-            {"name": "19. Deploy Token smart-contract", "value": "deploy_erc20"},
+            {"name": "19. Deploy Token smart-contract", "value": "deploytoken"},
             {"name": "20. Send Token ERC20 Random or File (addressERC20.txt) | Somnia Testnet", "value": "sendtoken"},
             
             {"name": "21. Exit", "value": "exit"},
