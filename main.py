@@ -144,6 +144,10 @@ async def run_mintomnihub(language: str):
     from scripts.mintomnihub import run_mintomnihub as mintomnihub_run
     await mintomnihub_run(language)
 
+async def run_swapsoex(language: str):
+    from scripts.swapsoex import run_swapsoex as swapsoex_run
+    await swapsoex_run(language)
+
 
 async def cmd_exit(language: str):
     print_border(f"Exiting...", Fore.GREEN)
@@ -175,6 +179,7 @@ SCRIPT_MAP = {
     "wrapquick": run_wrapquick,
     "wrapsoex": run_wrapsoex,
     "mintomnihub": run_mintomnihub,
+    "swapsoex": run_swapsoex,
     "exit": cmd_exit
 }
 
@@ -185,25 +190,26 @@ def get_available_scripts(language):
             {"name": "2. Mint $PONG | Somnia Testnet", "value": "mintpong"},
             {"name": "3. Mint $PING | Somnia Testnet", "value": "mintping"},
             {"name": "4. QuickSwap [ STT | USDC | WETH | WSTT ] | Somnia Testnet", "value": "quickswap"},
-            {"name": "5. Wrap/Unwrap STT -> QuickSwap | Somnia Testnet", "value": "quickswap"},
-            {"name": "6. Wrap/Unwrap STT -> Somnia Exchange | Somnia Testnet", "value": "wrapsoex"},
-            {"name": "7. Swap $PONG -> $PING | Somnia Testnet", "value": "swappong"},
-            {"name": "8. Swap $PING -> $PONG | Somnia Testnet", "value": "swapping", "separator": True},
-            {"name": "9. Mint NFT Community Member of Somnia (CMS - CoNFT) | Somnia Testnet", "value": "conftnft"},
-            #{"name": "10. Mint 1000 sUSDT [END] | Somnia Testnet", "value": "mintsusdt"},
-            #{"name": "11. Memecoin Trading - Mua Memecoin ( SOMI / SMSM / SMI ) [END] | Somnia Testnet", "value": "buymeme"},
-            #{"name": "12. Memecoin Trading - Bán Memecoin ( SOMI / SMSM / SMI )[END] | Somnia Testnet", "value": "sellmeme"},
-            {"name": "10. Quills Fun - Mint Tin Nhắn NFT | Somnia Testnet", "value": "fun"},
-            {"name": "11. Love Somini | Somnia Testnet", "value": "lovesomini"},
-            {"name": "12. Mint NFTs NERZO | Somnia Testnet", "value": "mintnerzo"},
-            {"name": "13. Mint Somni ✨ | Somnia Testnet", "value": "mintaura"},
-            {"name": "14. Mint ALZE | Somnia Testnet", "value": "mintalze"},
-            {"name": "15. Mint OmniHub [ OMNIHUB x SOMNIA | Somnia Cats ] | Somnia Testnet", "value": "mintomnihub"},
-            {"name": "16. Deploy Smart Contract Mintair | Somnia Testnet", "value": "mintair"},
-            {"name": "17. Deploy NFT - Quản lý bộ sưu tập NFT [ Tạo | Mint | Đốt ] | Somnia Testnet", "value": "nftcollection"},
-            {"name": "18. Send TX ngẫu nhiên hoặc File (address.txt) | Somnia Testnet", "value": "sendtx"},
-            {"name": "19. Deploy Token smart-contract | Somnia Testnet", "value": "deploytoken"},
-            {"name": "20. Send Token ERC20 ngẫu nhiên hoặc File (addressERC20.txt) | Somnia Testnet", "value": "sendtoken"},
+            {"name": "5. Somnia Exchange [ STT | USDT.g | NIA | WSTT ] | Somnia Testnet", "value": "swapsoex"},   
+            {"name": "6. Wrap/Unwrap STT -> QuickSwap | Somnia Testnet", "value": "quickswap"},
+            {"name": "7. Wrap/Unwrap STT -> Somnia Exchange | Somnia Testnet", "value": "wrapsoex"},
+            {"name": "8. Swap $PONG -> $PING | Somnia Testnet", "value": "swappong"},
+            {"name": "9. Swap $PING -> $PONG | Somnia Testnet", "value": "swapping", "separator": True},
+            {"name": "10. Mint NFT Community Member of Somnia (CMS - CoNFT) | Somnia Testnet", "value": "conftnft"},
+            #{"name": "11. Mint 1000 sUSDT [END] | Somnia Testnet", "value": "mintsusdt"},
+            #{"name": "12. Memecoin Trading - Mua Memecoin ( SOMI / SMSM / SMI ) [END] | Somnia Testnet", "value": "buymeme"},
+            #{"name": "13. Memecoin Trading - Bán Memecoin ( SOMI / SMSM / SMI )[END] | Somnia Testnet", "value": "sellmeme"},
+            {"name": "11. Quills Fun - Mint Tin Nhắn NFT | Somnia Testnet", "value": "fun"},
+            {"name": "12. Love Somini | Somnia Testnet", "value": "lovesomini"},
+            {"name": "13. Mint NFTs NERZO | Somnia Testnet", "value": "mintnerzo"},
+            {"name": "14. Mint Somni ✨ | Somnia Testnet", "value": "mintaura"},
+            {"name": "15. Mint ALZE | Somnia Testnet", "value": "mintalze"},
+            {"name": "16. Mint OmniHub [ OMNIHUB x SOMNIA | Somnia Cats ] | Somnia Testnet", "value": "mintomnihub"},
+            {"name": "17. Deploy Smart Contract Mintair | Somnia Testnet", "value": "mintair"},
+            {"name": "18. Deploy NFT - Quản lý bộ sưu tập NFT [ Tạo | Mint | Đốt ] | Somnia Testnet", "value": "nftcollection"},
+            {"name": "19. Send TX ngẫu nhiên hoặc File (address.txt) | Somnia Testnet", "value": "sendtx"},
+            {"name": "20. Deploy Token smart-contract | Somnia Testnet", "value": "deploytoken"},
+            {"name": "21. Send Token ERC20 ngẫu nhiên hoặc File (addressERC20.txt) | Somnia Testnet", "value": "sendtoken"},
        
             {"name": "21. Exit", "value": "exit"},
             
@@ -213,27 +219,28 @@ def get_available_scripts(language):
             {"name": "2. Mint $PONG | Somnia Testnet", "value": "mintpong"},
             {"name": "3. Mint $PING | Somnia Testnet", "value": "mintping"},
             {"name": "4. QuickSwap [ STT | USDC | WETH | WSTT ] | Somnia Testnet", "value": "quickswap"},
-            {"name": "5. Wrap/Unwrap STT -> QuickSwap | Somnia Testnet", "value": "wrapquick"},
-            {"name": "6. Wrap/Unwrap STT -> Somnia Exchange | Somnia Testnet", "value": "wrapsoex"},     
-            {"name": "7. Swap $PONG -> $PING | Somnia Testnet", "value": "swappong"},
-            {"name": "8. Swap $PING -> $PONG | Somnia Testnet", "value": "swapping", "separator": True},
-            {"name": "9. Mint NFT Community Member of Somnia (CMS - CoNFT) | Somnia Testnet", "value": "conftnft"},
-            #{"name": "10. Mint 1000 sUSDT [END] | Somnia Testnet", "value": "mintsusdt"},
-            #{"name": "11. Memecoin Trading - Buy Memecoin ( SOMI / SMSM / SMI ) [END] | Somnia Testnet", "value": "buymeme"},
-            #{"name": "12. Memecoin Trading - Sell Memecoin ( SOMI / SMSM / SMI ) [END] | Somnia Testnet", "value": "sellmeme"},
-            {"name": "10. Quills Fun - Mint Message NFT | Somnia Testnet", "value": "fun"},
-            {"name": "11. Love Somini | Somnia Testnet", "value": "lovesomini"},
-            {"name": "12. Mint NFTs NERZO | Somnia Testnet", "value": "mintnerzo"},
-            {"name": "13. Mint Somni ✨ | Somnia Testnet", "value": "mintaura"},
-            {"name": "14. Mint ALZE | Somnia Testnet", "value": "mintalze"},
-            {"name": "15. Mint OmniHub [ OMNIHUB x SOMNIA | Somnia Cats ] | Somnia Testnet", "value": "mintomnihub"},
-            {"name": "16. Deploy Smart Contract Mintair | Somnia Testnet", "value": "mintair"},
-            {"name": "17. Deploy NFT - Manage NFT Collection [ Create | Mint | Burn ] | Somnia Testnet", "value": "nftcollection"},
-            {"name": "18. Send Random TX or File (address.txt) | Somnia Testnet", "value": "sendtx"},
-            {"name": "19. Deploy Token smart-contract", "value": "deploytoken"},
-            {"name": "20. Send Token ERC20 Random or File (addressERC20.txt) | Somnia Testnet", "value": "sendtoken"},
+            {"name": "5. Somnia Exchange [ STT | USDT.g | NIA | WSTT ] | Somnia Testnet", "value": "swapsoex"},   
+            {"name": "6. Wrap/Unwrap STT -> QuickSwap | Somnia Testnet", "value": "wrapquick"},
+            {"name": "7. Wrap/Unwrap STT -> Somnia Exchange | Somnia Testnet", "value": "wrapsoex"},     
+            {"name": "8. Swap $PONG -> $PING | Somnia Testnet", "value": "swappong"},
+            {"name": "9. Swap $PING -> $PONG | Somnia Testnet", "value": "swapping", "separator": True},
+            {"name": "10. Mint NFT Community Member of Somnia (CMS - CoNFT) | Somnia Testnet", "value": "conftnft"},
+            #{"name": "11. Mint 1000 sUSDT [END] | Somnia Testnet", "value": "mintsusdt"},
+            #{"name": "12. Memecoin Trading - Buy Memecoin ( SOMI / SMSM / SMI ) [END] | Somnia Testnet", "value": "buymeme"},
+            #{"name": "13. Memecoin Trading - Sell Memecoin ( SOMI / SMSM / SMI ) [END] | Somnia Testnet", "value": "sellmeme"},
+            {"name": "11. Quills Fun - Mint Message NFT | Somnia Testnet", "value": "fun"},
+            {"name": "12. Love Somini | Somnia Testnet", "value": "lovesomini"},
+            {"name": "13. Mint NFTs NERZO | Somnia Testnet", "value": "mintnerzo"},
+            {"name": "14. Mint Somni ✨ | Somnia Testnet", "value": "mintaura"},
+            {"name": "15. Mint ALZE | Somnia Testnet", "value": "mintalze"},
+            {"name": "16. Mint OmniHub [ OMNIHUB x SOMNIA | Somnia Cats ] | Somnia Testnet", "value": "mintomnihub"},
+            {"name": "17. Deploy Smart Contract Mintair | Somnia Testnet", "value": "mintair"},
+            {"name": "18. Deploy NFT - Manage NFT Collection [ Create | Mint | Burn ] | Somnia Testnet", "value": "nftcollection"},
+            {"name": "19. Send Random TX or File (address.txt) | Somnia Testnet", "value": "sendtx"},
+            {"name": "20. Deploy Token smart-contract", "value": "deploytoken"},
+            {"name": "21. Send Token ERC20 Random or File (addressERC20.txt) | Somnia Testnet", "value": "sendtoken"},
             
-            {"name": "21. Exit", "value": "exit"},
+            {"name": "22. Exit", "value": "exit"},
         ]
     }
     return scripts[language]
