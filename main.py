@@ -148,6 +148,10 @@ async def run_swapsoex(language: str):
     from scripts.swapsoex import run_swapsoex as swapsoex_run
     await swapsoex_run(language)
 
+async def run_sopixel(language: str):
+    from scripts.sopixel import run_sopixel as sopixel_run
+    await sopixel_run(language)
+
 
 async def cmd_exit(language: str):
     print_border(f"Exiting...", Fore.GREEN)
@@ -180,6 +184,7 @@ SCRIPT_MAP = {
     "wrapsoex": run_wrapsoex,
     "mintomnihub": run_mintomnihub,
     "swapsoex": run_swapsoex,
+    "sopixel": run_sopixel,
     "exit": cmd_exit
 }
 
@@ -210,8 +215,9 @@ def get_available_scripts(language):
             {"name": "19. Send TX ngẫu nhiên hoặc File (address.txt) | Somnia Testnet", "value": "sendtx"},
             {"name": "20. Deploy Token smart-contract | Somnia Testnet", "value": "deploytoken"},
             {"name": "21. Send Token ERC20 ngẫu nhiên hoặc File (addressERC20.txt) | Somnia Testnet", "value": "sendtoken"},
-       
-            {"name": "21. Exit", "value": "exit"},
+            {"name": "22. Tô màu Somnia Pixel | Somnia Testnet", "value": "sopixel"},
+
+            {"name": "23. Exit", "value": "exit"},
             
         ],
         'en': [
@@ -239,8 +245,9 @@ def get_available_scripts(language):
             {"name": "19. Send Random TX or File (address.txt) | Somnia Testnet", "value": "sendtx"},
             {"name": "20. Deploy Token smart-contract", "value": "deploytoken"},
             {"name": "21. Send Token ERC20 Random or File (addressERC20.txt) | Somnia Testnet", "value": "sendtoken"},
-            
-            {"name": "22. Exit", "value": "exit"},
+            {"name": "22. Somnia Pixel Color | Somnia Testnet", "value": "sopixel"},
+
+            {"name": "23. Exit", "value": "exit"},
         ]
     }
     return scripts[language]
