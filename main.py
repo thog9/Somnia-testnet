@@ -38,7 +38,7 @@ def _banner():
     print(f"{Fore.GREEN}{'═' * BORDER_WIDTH}{Style.RESET_ALL}")
     print_border("SOMNIA TESTNET", Fore.GREEN)
     print(f"{Fore.YELLOW}│ {'Liên hệ / Contact'}: {Fore.CYAN}https://t.me/thog099{Style.RESET_ALL}")
-    print(f"{Fore.YELLOW}│ {'Replit'}: {Fore.CYAN}Thog{Style.RESET_ALL}")
+    print(f"{Fore.YELLOW}│ {'Discord'}: {Fore.CYAN}https://discord.gg/MnmYBKfHQf{Style.RESET_ALL}")
     print(f"{Fore.YELLOW}│ {'Channel Telegram'}: {Fore.CYAN}https://t.me/thogairdrops{Style.RESET_ALL}")
     print(f"{Fore.GREEN}{'═' * BORDER_WIDTH}{Style.RESET_ALL}")
 
