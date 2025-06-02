@@ -191,26 +191,26 @@ SCRIPT_MAP = {
 def get_available_scripts(language):
     scripts = {
         'vi': [
-            {"name": "1. Faucet token $STT | Somnia Testnet", "value": "faucetstt"},
+            {"name": "1. Faucet token $STT | Somnia Testnet", "value": "faucetstt", "locked": True},
             {"name": "2. Mint $PONG | Somnia Testnet", "value": "mintpong"},
             {"name": "3. Mint $PING | Somnia Testnet", "value": "mintping"},
-            {"name": "4. QuickSwap [ STT | USDC | WETH | WSTT ] | Somnia Testnet", "value": "quickswap"},
-            {"name": "5. Somnia Exchange [ STT | USDT.g | NIA | WSTT ] | Somnia Testnet", "value": "swapsoex"},   
+            {"name": "4. QuickSwap [ STT | USDC | WETH | WSTT ] | Somnia Testnet", "value": "quickswap", "locked": True},
+            {"name": "5. Somnia Exchange [ STT | USDT.g | NIA | WSTT ] | Somnia Testnet", "value": "swapsoex", "locked": True},   
             {"name": "6. Wrap/Unwrap STT -> QuickSwap | Somnia Testnet", "value": "quickswap"},
             {"name": "7. Wrap/Unwrap STT -> Somnia Exchange | Somnia Testnet", "value": "wrapsoex"},
-            {"name": "8. Swap $PONG -> $PING | Somnia Testnet", "value": "swappong"},
-            {"name": "9. Swap $PING -> $PONG | Somnia Testnet", "value": "swapping", "separator": True},
-            {"name": "10. Mint NFT Community Member of Somnia (CMS - CoNFT) | Somnia Testnet", "value": "conftnft"},
+            {"name": "8. Swap $PONG -> $PING | Somnia Testnet", "value": "swappong", "locked": True},
+            {"name": "9. Swap $PING -> $PONG | Somnia Testnet", "value": "swapping", "separator": True, "locked": True},
+            {"name": "10. Mint NFT Community Member of Somnia (CMS - CoNFT) | Somnia Testnet", "value": "conftnft", "locked": True},
             #{"name": "11. Mint 1000 sUSDT [END] | Somnia Testnet", "value": "mintsusdt"},
             #{"name": "12. Memecoin Trading - Mua Memecoin ( SOMI / SMSM / SMI ) [END] | Somnia Testnet", "value": "buymeme"},
             #{"name": "13. Memecoin Trading - Bán Memecoin ( SOMI / SMSM / SMI )[END] | Somnia Testnet", "value": "sellmeme"},
-            {"name": "11. Quills Fun - Mint Tin Nhắn NFT | Somnia Testnet", "value": "fun"},
-            {"name": "12. Love Somini | Somnia Testnet", "value": "lovesomini"},
-            {"name": "13. Mint NFTs NERZO | Somnia Testnet", "value": "mintnerzo"},
-            {"name": "14. Mint Somni ✨ | Somnia Testnet", "value": "mintaura"},
-            {"name": "15. Mint ALZE | Somnia Testnet", "value": "mintalze"},
-            {"name": "16. Mint OmniHub [ OMNIHUB x SOMNIA | Somnia Cats ] | Somnia Testnet", "value": "mintomnihub"},
-            {"name": "17. Deploy Smart Contract Mintair | Somnia Testnet", "value": "mintair"},
+            {"name": "11. Quills Fun - Mint Tin Nhắn NFT | Somnia Testnet", "value": "fun", "locked": True},
+            {"name": "12. Love Somini | Somnia Testnet", "value": "lovesomini", "locked": True},
+            {"name": "13. Mint NFTs NERZO | Somnia Testnet", "value": "mintnerzo", "locked": True},
+            {"name": "14. Mint Somni ✨ | Somnia Testnet", "value": "mintaura", "locked": True},
+            {"name": "15. Mint ALZE | Somnia Testnet", "value": "mintalze", "locked": True},
+            {"name": "16. Mint OmniHub [ OMNIHUB x SOMNIA | Somnia Cats ] | Somnia Testnet", "value": "mintomnihub", "locked": True},
+            {"name": "17. Deploy Smart Contract Mintair | Somnia Testnet", "value": "mintair", "locked": True},
             {"name": "18. Deploy NFT - Quản lý bộ sưu tập NFT [ Tạo | Mint | Đốt ] | Somnia Testnet", "value": "nftcollection"},
             {"name": "19. Send TX ngẫu nhiên hoặc File (address.txt) | Somnia Testnet", "value": "sendtx"},
             {"name": "20. Deploy Token smart-contract | Somnia Testnet", "value": "deploytoken"},
@@ -221,26 +221,26 @@ def get_available_scripts(language):
             
         ],
         'en': [
-            {"name": "1. Faucet token $STT", "value": "faucetstt"},
+            {"name": "1. Faucet token $STT", "value": "faucetstt", "locked": True},
             {"name": "2. Mint $PONG | Somnia Testnet", "value": "mintpong"},
             {"name": "3. Mint $PING | Somnia Testnet", "value": "mintping"},
-            {"name": "4. QuickSwap [ STT | USDC | WETH | WSTT ] | Somnia Testnet", "value": "quickswap"},
-            {"name": "5. Somnia Exchange [ STT | USDT.g | NIA | WSTT ] | Somnia Testnet", "value": "swapsoex"},   
+            {"name": "4. QuickSwap [ STT | USDC | WETH | WSTT ] | Somnia Testnet", "value": "quickswap", "locked": True},
+            {"name": "5. Somnia Exchange [ STT | USDT.g | NIA | WSTT ] | Somnia Testnet", "value": "swapsoex", "locked": True},   
             {"name": "6. Wrap/Unwrap STT -> QuickSwap | Somnia Testnet", "value": "wrapquick"},
             {"name": "7. Wrap/Unwrap STT -> Somnia Exchange | Somnia Testnet", "value": "wrapsoex"},     
-            {"name": "8. Swap $PONG -> $PING | Somnia Testnet", "value": "swappong"},
-            {"name": "9. Swap $PING -> $PONG | Somnia Testnet", "value": "swapping", "separator": True},
-            {"name": "10. Mint NFT Community Member of Somnia (CMS - CoNFT) | Somnia Testnet", "value": "conftnft"},
+            {"name": "8. Swap $PONG -> $PING | Somnia Testnet", "value": "swappong", "locked": True},
+            {"name": "9. Swap $PING -> $PONG | Somnia Testnet", "value": "swapping", "separator": True, "locked": True},
+            {"name": "10. Mint NFT Community Member of Somnia (CMS - CoNFT) | Somnia Testnet", "value": "conftnft", "locked": True},
             #{"name": "11. Mint 1000 sUSDT [END] | Somnia Testnet", "value": "mintsusdt"},
             #{"name": "12. Memecoin Trading - Buy Memecoin ( SOMI / SMSM / SMI ) [END] | Somnia Testnet", "value": "buymeme"},
             #{"name": "13. Memecoin Trading - Sell Memecoin ( SOMI / SMSM / SMI ) [END] | Somnia Testnet", "value": "sellmeme"},
-            {"name": "11. Quills Fun - Mint Message NFT | Somnia Testnet", "value": "fun"},
-            {"name": "12. Love Somini | Somnia Testnet", "value": "lovesomini"},
-            {"name": "13. Mint NFTs NERZO | Somnia Testnet", "value": "mintnerzo"},
-            {"name": "14. Mint Somni ✨ | Somnia Testnet", "value": "mintaura"},
-            {"name": "15. Mint ALZE | Somnia Testnet", "value": "mintalze"},
-            {"name": "16. Mint OmniHub [ OMNIHUB x SOMNIA | Somnia Cats ] | Somnia Testnet", "value": "mintomnihub"},
-            {"name": "17. Deploy Smart Contract Mintair | Somnia Testnet", "value": "mintair"},
+            {"name": "11. Quills Fun - Mint Message NFT | Somnia Testnet", "value": "fun", "locked": True},
+            {"name": "12. Love Somini | Somnia Testnet", "value": "lovesomini", "locked": True},
+            {"name": "13. Mint NFTs NERZO | Somnia Testnet", "value": "mintnerzo", "locked": True},
+            {"name": "14. Mint Somni ✨ | Somnia Testnet", "value": "mintaura", "locked": True},
+            {"name": "15. Mint ALZE | Somnia Testnet", "value": "mintalze", "locked": True},
+            {"name": "16. Mint OmniHub [ OMNIHUB x SOMNIA | Somnia Cats ] | Somnia Testnet", "value": "mintomnihub", "locked": True},
+            {"name": "17. Deploy Smart Contract Mintair | Somnia Testnet", "value": "mintair", "locked": True},
             {"name": "18. Deploy NFT - Manage NFT Collection [ Create | Mint | Burn ] | Somnia Testnet", "value": "nftcollection"},
             {"name": "19. Send Random TX or File (address.txt) | Somnia Testnet", "value": "sendtx"},
             {"name": "20. Deploy Token smart-contract", "value": "deploytoken"},
@@ -261,6 +261,8 @@ def run_script(script_func, language):
 
 def select_language():
     while True:
+        _clear()
+        _banner()
         print(f"{Fore.GREEN}{'═' * BORDER_WIDTH}{Style.RESET_ALL}")
         print_border("CHỌN NGÔN NGỮ / SELECT LANGUAGE", Fore.YELLOW)
         questions = [
@@ -279,15 +281,38 @@ def main():
     _banner()
     language = select_language()
 
+    messages = {
+        "vi": {
+            "running": "Đang thực thi: {}",
+            "completed": "Đã hoàn thành: {}",
+            "error": "Lỗi: {}",
+            "press_enter": "Nhấn Enter để tiếp tục...",
+            "menu_title": "MENU CHÍNH",
+            "select_script": "Chọn script để chạy",
+            "locked": "🔒 Script này bị khóa! Vui lòng vào group hoặc donate để mở khóa."
+        },
+        "en": {
+            "running": "Running: {}",
+            "completed": "Completed: {}",
+            "error": "Error: {}",
+            "press_enter": "Press Enter to continue...",
+            "menu_title": "MAIN MENU",
+            "select_script": "Select script to run",
+            "locked": "🔒 This script is locked! Please join our group or donate to unlock."
+        }
+    }
+
     while True:
         _clear()
         _banner()
-        print_border("MENU CHÍNH / MAIN MENU", Fore.YELLOW)
+        print(f"{Fore.YELLOW}{'═' * BORDER_WIDTH}{Style.RESET_ALL}")
+        print_border(messages[language]["menu_title"], Fore.YELLOW)
+        print(f"{Fore.CYAN}│ {messages[language]['select_script'].center(BORDER_WIDTH - 4)} │{Style.RESET_ALL}")
 
         available_scripts = get_available_scripts(language)
         questions = [
             inquirer.List('script',
-                          message=f"{Fore.CYAN}{'Chọn script để chạy / Select script to run'}{Style.RESET_ALL}",
+                          message=f"{Fore.CYAN}{messages[language]['select_script']}{Style.RESET_ALL}",
                           choices=[script["name"] for script in available_scripts],
                           carousel=True)
         ]
@@ -296,26 +321,40 @@ def main():
             continue
 
         selected_script_name = answers['script']
-        selected_script_value = next(script["value"] for script in available_scripts if script["name"] == selected_script_name)
+        selected_script = next(script for script in available_scripts if script["name"] == selected_script_name)
+        selected_script_value = selected_script["value"]
+
+        if selected_script.get("locked"):
+            _clear()
+            _banner()
+            print_border("SCRIPT BỊ KHÓA / LOCKED", Fore.RED)
+            print(f"{Fore.YELLOW}{messages[language]['locked']}")
+            print('')
+            print(f"{Fore.CYAN}→ Telegram: https://t.me/thogairdrops")
+            print(f"{Fore.CYAN}→ Donate: https://buymecafe.vercel.app{Style.RESET_ALL}")
+            print('')
+            input(f"{Fore.YELLOW}⏎ {messages[language]['press_enter']}{Style.RESET_ALL:^76}")
+            continue
 
         script_func = SCRIPT_MAP.get(selected_script_value)
         if script_func is None:
             print(f"{Fore.RED}{'═' * BORDER_WIDTH}{Style.RESET_ALL}")
             print_border(f"{'Chưa triển khai / Not implemented'}: {selected_script_name}", Fore.RED)
-            input(f"{Fore.YELLOW}⏎ {'Nhấn Enter để tiếp tục... / Press Enter to continue...'}{Style.RESET_ALL:^76}")
+            input(f"{Fore.YELLOW}⏎ {messages[language]['press_enter']}{Style.RESET_ALL:^76}")
             continue
 
         try:
             print(f"{Fore.CYAN}{'═' * BORDER_WIDTH}{Style.RESET_ALL}")
-            print_border(f"ĐANG CHẠY / RUNNING: {selected_script_name}", Fore.CYAN)
+            print_border(messages[language]["running"].format(selected_script_name), Fore.CYAN)
             run_script(script_func, language)
             print(f"{Fore.GREEN}{'═' * BORDER_WIDTH}{Style.RESET_ALL}")
-            print_border(f"{'Hoàn thành / Completed'} {selected_script_name}", Fore.GREEN)
-            input(f"{Fore.YELLOW}⏎ {'Nhấn Enter để tiếp tục... / Press Enter to continue...'}{Style.RESET_ALL:^76}")
+            print_border(messages[language]["completed"].format(selected_script_name), Fore.GREEN)
+            input(f"{Fore.YELLOW}⏎ {messages[language]['press_enter']}{Style.RESET_ALL:^76}")
         except Exception as e:
             print(f"{Fore.RED}{'═' * BORDER_WIDTH}{Style.RESET_ALL}")
-            print_border(f"{'Lỗi / Error'}: {str(e)}", Fore.RED)
-            input(f"{Fore.YELLOW}⏎ {'Nhấn Enter để tiếp tục... / Press Enter to continue...'}{Style.RESET_ALL:^76}")
+            print_border(messages[language]["error"].format(str(e)), Fore.RED)
+            print('')
+            input(f"{Fore.YELLOW}⏎ {messages[language]['press_enter']}{Style.RESET_ALL:^76}")
 
 if __name__ == "__main__":
     main()
